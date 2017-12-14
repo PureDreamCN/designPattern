@@ -12,31 +12,37 @@
  *
  * @author 郭飞 created on 2017/12/12
  */
-public class NoteBook  {
+public class Test  {
 
-    private ThreePlug threePlug;
-    public NoteBook(ThreePlug threePlug){
+    private Targetable threePlug;
+    public Test(Targetable threePlug){
         this.threePlug = threePlug;
     }
     public void charge(){
         threePlug.powerWithThree();
     }
     public static void main(String[] args){
-      /*  TwoPlug twoPlug = new TwoPlug();
+
+
+      //使用继承方式
+       /* Targetable  threePlug = new TwoPlugExtend();
+        Test noteBook = new Test(threePlug);
+        noteBook.charge();*/
+
+       //使用组合方式则可以适配到子类
+           /*  TwoPlug twoPlug = new TwoPlug();
         ThreePlug threePlug = new TwoPlugAdpter(twoPlug);
         NoteBook noteBook = new NoteBook(threePlug);
         noteBook.charge();*/
 
-       /* threePlug = new TwoPlugExtend();
-        noteBook = new NoteBook(threePlug);
-        noteBook.charge();*/
-
-       //使用组合方式则可以适配到子类
-        TestTwo testTwo = new TestTwo();
-        ThreePlug threePlug = new TwoPlugAdpter(testTwo);
-        NoteBook noteBook = new NoteBook(threePlug);
+        Source testTwo = new Source();
+        Targetable threePlug = new TwoPlugAdpter(testTwo);
+        Test noteBook = new Test(threePlug);
         noteBook.charge();
 
+      //接口适配器
+     /*   Targetable targetable = new TwoPlugInterTest();
+        targetable.sayHello();*/
 
     }
 }

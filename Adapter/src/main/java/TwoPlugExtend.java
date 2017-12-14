@@ -9,9 +9,11 @@
  *
  * @author 郭飞 created on 2017/12/12
  */
-public class TwoPlugExtend extends TwoPlug implements ThreePlug {
+public class TwoPlugExtend extends AbstractSource implements Targetable {
+    public void sayHello() {
 
-    @Override
+    }
+
     public void powerWithThree() {
         System.out.print("使用继承方式适配");
        this.powerWithTwo();

@@ -10,7 +10,23 @@
  * how:     (这里描述这个类的使用方法 – 可选).<br/>
  * warning: (这里描述这个类的注意事项 – 可选).<br/>
  *
- * @author 郭飞 created on 2017/12/12
+ * @author 郭飞 created on 2017/12/14
  */
-public class TestTwo extends TwoPlug {
+public class MyCollection implements  Collection {
+
+    String[] str = {"A","B","C","D"};
+    @Override
+    public Iterator iterator() {
+        return new MyIterator(this);
+    }
+
+    @Override
+    public int Size() {
+        return str.length;
+    }
+
+    @Override
+    public Object get(int index) {
+        return str[index];
+    }
 }

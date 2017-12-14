@@ -9,13 +9,17 @@
  *
  * @author 郭飞 created on 2017/12/12
  */
-public class TwoPlugAdpter implements  ThreePlug {
+public class TwoPlugAdpter implements  Targetable {
 
-    private  TwoPlug twoPlug;
-    public TwoPlugAdpter( TwoPlug twoPlug){
+    private  AbstractSource twoPlug;
+    public TwoPlugAdpter( AbstractSource twoPlug){
         this.twoPlug = twoPlug;
     }
-    @Override
+
+    public void sayHello() {
+
+    }
+
     public void powerWithThree() {
         System.out.println("转换为二相电流");
         twoPlug.powerWithTwo();

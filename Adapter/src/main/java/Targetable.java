@@ -5,13 +5,13 @@
  */
 
 /**
- * what: 原先的角色
+ * what:   三相电流供电接口> 适配目标对象
  *
  * @author 郭飞 created on 2017/12/12
  */
-public class TwoPlug {
+public interface Targetable {
 
-    public void powerWithTwo(){
-       System.out.println("使用二相电流供电");
-    }
+    //使用三相电流供电
+    public  void powerWithThree();
+    public void sayHello();
 }

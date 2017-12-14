@@ -16,6 +16,10 @@
         <module>AbstractFactoryPattern</module>
         <module>JdkProxy</module>
         <module>CglibProxy</module>
+        <module>Adapter</module>
+        <module>StrategyPattern</module>
+        <module>CorPattern</module>
+        <module>IteratorPattern</module>
     </modules>
 
 
